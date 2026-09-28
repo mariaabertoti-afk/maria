@@ -1,309 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Portfólio | Maria Antônia</title>
-
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
 
     <header>
-        <img src="foto.jpg" alt="Foto da Maria" class="foto">
-        <a href="#inicio" class="logo">M.</a>
+        <nav class="menu">
+            <a href="#inicio" class="logo">M.</a>
 
-        <nav id="menu">
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre mim</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#contato">Contato</a>
+            <div class="links">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre mim</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </div>
+
+            <button id="tema" class="botao-tema">☾</button>
         </nav>
-
-        <div class="botoes-menu">
-            <button id="tema">☀</button>
-            <button id="menuMobile">☰</button>
-        </div>
-
     </header>
 
     <main>
-
         <!-- INÍCIO -->
-
         <section id="inicio" class="inicio">
 
             <div class="foto">
-                <img src="foto.jpg" alt="Foto da Maria">
+                <img src="./imagem/foto.jpg" alt="Foto da Maria">
             </div>
 
             <div class="apresentacao">
-
-                <p class="subtitulo">
-                    OLÁ, SEJA BEM-VINDO(A)!
-                </p>
+                <p class="subtitulo">OLÁ, SEJA BEM-VINDO(A)!</p>
 
                 <h1>Maria Antônia</h1>
 
                 <h2>Desenvolvedora em formação</h2>
 
                 <p class="frase">
-                    "Programar é mais do que escrever código,
-                    é criar possibilidades."
+                    "Programar é mais do que escrever código, é criar possibilidades."
                 </p>
 
-                <div class="redes">
-
-                    <a href="mailto:seuemail@gmail.com">
-                        ✉ E-mail
-                    </a>
-
-                    <a href="#projetos">
-                        ⌘ Projetos
-                    </a>
-
+                <div class="botoes">
+                    <a href="#contato">✉ E-mail</a>
+                    <a href="#projetos">⌘ Projetos</a>
                 </div>
-
             </div>
 
-            <div class="informacoes">
-
+            <div class="qualidades">
                 <p>♡ Estudante</p>
                 <p>⌘ Tecnologia</p>
                 <p>☆ Criatividade</p>
                 <p>✧ Dedicação</p>
-
             </div>
 
         </section>
 
         <!-- SOBRE MIM -->
+        <section id="sobre" class="secao">
+            <p class="subtitulo">CONHEÇA UM POUCO</p>
+            <h2>Sobre mim</h2>
 
-        <section id="sobre" class="sobre">
+            <p>
+                Olá! Meu nome é Maria Antônia e estou começando minha jornada
+                na área da programação. Desde pequena, gosto de mexer em
+                computadores e tenho curiosidade em aprender coisas novas.
+            </p>
 
-            <div class="sobre-texto">
+            <p>
+                Atualmente, estou estudando programação e quero continuar
+                aprendendo e desenvolvendo minhas habilidades. Sou uma pessoa
+                dedicada, responsável e esforçada, e gosto de enfrentar novos
+                desafios.
+            </p>
 
-                <h2>Sobre mim</h2>
-
-                <p>
-                    Olá! Eu sou a Maria, tenho 16 anos e comecei
-                    a fazer cursos na área da tecnologia.
-                </p>
-
-                <p>
-                    Desde pequena gosto de computadores e agora
-                    estou dando meus primeiros passos na programação.
-                </p>
-
-                <p>
-                    Sou respeitosa, esforçada e responsável.
-                    Gosto de aprender coisas novas, desenvolver
-                    projetos e continuar evoluindo.
-                </p>
-
-                <p>
-                    Também tenho muito interesse pela área
-                    de Arquitetura.
-                </p>
-
-            </div>
-
-            <div class="sobre-habilidades">
-
-                <h2>Habilidades</h2>
-
-                <div class="habilidades">
-
-                    <span>JavaScript</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Node.js</span>
-                    <span>PostgreSQL</span>
-                    <span>Git e GitHub</span>
-                    <span>Lógica de Programação</span>
-                    <span>Canva</span>
-
-                </div>
-
-            </div>
-
+            <p>
+                Além da tecnologia, também tenho interesse pela área de
+                Arquitetura, pois gosto de criatividade, projetos e novas ideias.
+            </p>
         </section>
 
         <!-- PROJETOS -->
+        <section id="projetos" class="secao">
+            <p class="subtitulo">MEUS TRABALHOS</p>
+            <h2>Projetos</h2>
 
-        <section id="projetos" class="projetos">
-
-            <div class="titulo-projetos">
-
-                <div>
-                    <p class="subtitulo">MEU APRENDIZADO</p>
-                    <h2>Meus projetos</h2>
-                </div>
-
-                <select id="filtro">
-
-                    <option value="todos">
-                        Todos os projetos
-                    </option>
-
-                    <option value="web">
-                        Desenvolvimento Web
-                    </option>
-
-                    <option value="banco">
-                        Banco de Dados
-                    </option>
-
-                </select>
-
-            </div>
-
-            <div class="lista-projetos">
-
-                <div class="card" data-tipo="web">
-
-                    <div class="icone">🎮</div>
-
-                    <h3>Minha Pokédex</h3>
-
+            <div class="projetos">
+                <div class="cartao">
+                    <h3>Pokédex</h3>
                     <p>
-                        Aplicação web que utiliza uma API
-                        para pesquisar informações sobre Pokémon.
+                        Projeto desenvolvido com HTML, CSS e JavaScript,
+                        utilizando uma API para buscar informações sobre Pokémon.
                     </p>
-
-                    <div class="tecnologias">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>API</span>
-                    </div>
-
                 </div>
 
-                <div class="card" data-tipo="web">
-
-                    <div class="icone">❎</div>
-
+                <div class="cartao">
                     <h3>Jogo da Velha</h3>
-
                     <p>
-                        Jogo desenvolvido para praticar
-                        lógica de programação.
+                        Um jogo desenvolvido para praticar lógica de programação
+                        e interação com a página.
                     </p>
-
-                    <div class="tecnologias">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-
                 </div>
 
-                <div class="card" data-tipo="banco">
-
-                    <div class="icone">▤</div>
-
-                    <h3>Sistema Escolar</h3>
-
+                <div class="cartao">
+                    <h3>Cadastro de Clientes</h3>
                     <p>
-                        Projeto de banco de dados para organizar
-                        informações de alunos.
+                        Página para praticar a criação de formulários
+                        utilizando HTML e CSS.
                     </p>
-
-                    <div class="tecnologias">
-                        <span>SQL</span>
-                        <span>PostgreSQL</span>
-                    </div>
-
                 </div>
-
-                <div class="card" data-tipo="web">
-
-                    <div class="icone">💡</div>
-
-                    <h3>Interface IHM</h3>
-
-                    <p>
-                        Projeto de interface para representar
-                        informações e controles de um robô.
-                    </p>
-
-                    <div class="tecnologias">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                </div>
-
             </div>
-
-            <p id="mensagemProjetos"></p>
-
         </section>
 
-        <!-- FORMAÇÃO, INTERESSES E CONTATO -->
+        <!-- CONTATO -->
+        <section id="contato" class="secao contato">
+            <p class="subtitulo">VAMOS CONVERSAR?</p>
+            <h2>Contato</h2>
 
-        <section class="informacoes-finais">
+            <p>
+                Obrigada por visitar meu portfólio!
+                Entre em contato comigo pelo e-mail.
+            </p>
 
-            <div class="bloco-final">
-
-                <h2>Formação</h2>
-
-                <h3>SENAI - Santa Catarina</h3>
-
-                <p>
-                    Cursos na área de tecnologia e programação.
-                </p>
-
-                <span>Em andamento</span>
-
-            </div>
-
-            <div class="bloco-final">
-
-                <h2>Interesses</h2>
-
-                <ul>
-                    <li>Programação</li>
-                    <li>Arquitetura</li>
-                    <li>Carros e eventos</li>
-                    <li>Design</li>
-                    <li>Novos conhecimentos</li>
-                </ul>
-
-            </div>
-
-            <div class="bloco-final" id="contato">
-
-                <h2>Contato</h2>
-
-                <p>Vamos conversar?</p>
-
-                <a href="mailto:seuemail@gmail.com" class="botao">
-                    Enviar e-mail →
-                </a>
-
-                <button id="voltarTopo" class="botao">
-                    Voltar ao topo ↑
-                </button>
-
-            </div>
-
+            <a class="botao" href="mailto:seuemail@email.com">
+                Enviar e-mail
+            </a>
         </section>
-
     </main>
 
     <footer>
-        <p>© 2026 Maria Antônia | Portfólio pessoal</p>
+        <p>© 2026 Maria Antônia | Portfólio</p>
     </footer>
 
-    <script src="script.js"></script>
-
 </body>
-
 </html>
